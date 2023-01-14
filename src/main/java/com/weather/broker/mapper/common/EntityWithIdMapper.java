@@ -1,5 +1,6 @@
 package com.weather.broker.mapper.common;
 
+import com.weather.broker.dto.CityDto;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.MappingTarget;
@@ -13,6 +14,8 @@ public interface EntityWithIdMapper<DTO, ENTITY> {
     DTO toDto(ENTITY entity);
 
     List<DTO> toDto(Iterable<ENTITY> var1);
+
+
 
     /*@Mapping(target = "id", ignore = true)
     void merge(@MappingTarget ENTITY var1, DTO var2);*/
